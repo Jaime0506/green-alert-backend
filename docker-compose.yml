@@ -6,8 +6,8 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_USER=alumno
+      - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=course-db
+      - POSTGRES_DB=green_alert
     volumes:
       - ./postgres:/var/lib/postgresql/data
