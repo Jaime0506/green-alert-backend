@@ -1,7 +1,7 @@
 services:
   myDB:
     image: postgres
-    container_name: my-database
+    container_name: green_alert
     restart: always
     ports:
       - 5432:5432
