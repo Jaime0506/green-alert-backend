@@ -18,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
+
     private final AuthService authService;
 
     @GetMapping("/")
@@ -39,6 +40,6 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> registe(@RequestBody RegisterRequest request) {
         
-        return ResponseEntity.ok(new AuthResponse());
+        return ResponseEntity.ok(authService.register(request));
     }
 }

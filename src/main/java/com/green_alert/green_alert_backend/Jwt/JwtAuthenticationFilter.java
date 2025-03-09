@@ -11,11 +11,13 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 
 // Al extender de la clase Abbstracta OncePerRequestFilter, se asegura que el filtro se ejecute una vez por cada request
 // y no una vez por cada petición de recurso, ademas de que nos permite crear nuestros propios filtros
 
 @Component
+@RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private String getTokenFromRequest(HttpServletRequest request) {
